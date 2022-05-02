@@ -53,9 +53,26 @@
             }
               
             ?>
-          <li class="nav-item">
+            <?php
+            if(!isset($_SESSION['username'])){
+              echo 
+              "<li class='nav-item active'>
+              <a class='nav-link' href='catalogue.php'
+              >Find your next Read!<span class='sr-only'>(current)</span></a>
+              </li>";
+            }
+            if(isset($_SESSION['username'])){ 
+              echo 
+              "<li class='nav-item active'>
+              <a class='nav-link' href='select.php'
+              >Find your next Read!<span class='sr-only'>(current)</span></a>
+              </li>";
+            }
+              
+            ?>
+          <!-- <li class="nav-item">
             <a class="nav-link" href="catalogue.php">Find your next Read!</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>

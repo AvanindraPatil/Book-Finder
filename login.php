@@ -55,7 +55,7 @@ else{
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top">
       <a class="navbar-brand" href="index.php">Book4U</a>
       <button
         class="navbar-toggler"
@@ -70,14 +70,43 @@ else{
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="login.php"
-              >Login <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
+          <?php
+            if(!isset($_SESSION['username'])){
+              echo 
+              "<li class='nav-item active'>
+              <a class='nav-link' href='login.php'
+              >Login <span class='sr-only'>(current)</span></a>
+              </li>";
+            }
+            if(isset($_SESSION['username'])){ 
+              echo 
+              "<li class='nav-item active'>
+              <a class='nav-link' href='logout.php'
+              >Logout <span class='sr-only'>(current)</span></a>
+              </li>";
+            }
+              
+            ?>
+            <?php
+            if(!isset($_SESSION['username'])){
+              echo 
+              "<li class='nav-item active'>
+              <a class='nav-link' href='catalogue.php'
+              >Find your next Read!<span class='sr-only'>(current)</span></a>
+              </li>";
+            }
+            if(isset($_SESSION['username'])){ 
+              echo 
+              "<li class='nav-item active'>
+              <a class='nav-link' href='select.php'
+              >Find your next Read!<span class='sr-only'>(current)</span></a>
+              </li>";
+            }
+              
+            ?>
+          <!-- <li class="nav-item">
             <a class="nav-link" href="catalogue.php">Find your next Read!</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
