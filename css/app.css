@@ -12,13 +12,13 @@ body {
   height: 100%;
   width: 100%;
   place-items: center;
-  background: #f2f2f2;
+  /* background: #f2f2f2; */
   /* background: linear-gradient(#00f5d4, #00bbf9); */
 }
 
 body {
-  background: #f5d9d5;
-  /* background-image: url("../assets/bg3.avif"); */
+  /* background: #f5d9d5; */
+  background-image: url("../assets/bg3.avif");
   font-family: "Poppins", sans-serif;
 }
 
